@@ -1,0 +1,57 @@
+<main role="main" class="inner cover">
+    <div class="container register-form">
+        <form id="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form">
+              <div class="form-content">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input formControlName="nom" name="nom" type="text" class="form-control" placeholder="Nom" value=""/>
+                          </div>
+                          <div class="form-group">
+                              <input formControlName="prenom" type="text" class="form-control" placeholder="Prénom" value=""/>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input formControlName="adresse" type="text" class="form-control" placeholder="Adresse" value=""/>
+                          </div>
+                          <div class="form-group">
+                              <input formControlName="cp"class="form-control" type="number" max="5" placeholder="Cp"/>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input formControlName="ville" type="text" class="form-control" placeholder="Ville" value=""/>
+                          </div>
+                          <div class="form-group">
+                              <input formControlName="tel" type="tel" class="form-control" placeholder="Tel." max="10" value=""/>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input formControlName="email" type="email" class="form-control" placeholder="Email" value=""/>
+                          </div>
+                          <div class="form-group">
+                              <input formControlName="civilite" type="text" class="form-control" placeholder="Civilité" value=""/>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input formControlName="login" type="text" class="form-control" placeholder="Login" value=""/>
+                          </div>
+                          <div class="form-group">
+                              <input formControlName="password" type="password" class="form-control" placeholder="Mot de passe" value=""/>
+                          </div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-sm btn-block">Primary</button>
+              </div>
+          </div>
+    </form>
+</div>
+<p>Form value: {{ registerForm.value | json }}</p>
+<p>Form status: {{ registerForm.status | json }}</p>
+
+</main>
+
